@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "x:\\unrealengine\\5.4.4-release\\yapdev\\plugins\\editorgcbutton\\source\\editorgcbutton\\private\\editorgcbuttoncommands.cpp",
+        "ProvidedModule": "",
+        "PCH": "x:\\unrealengine\\5.4.4-release\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "x:\\unrealengine\\5.4.4-release\\yapdev\\plugins\\editorgcbutton\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\editorgcbutton\\definitions.editorgcbutton.h",
+            "x:\\unrealengine\\5.4.4-release\\yapdev\\plugins\\editorgcbutton\\source\\editorgcbutton\\public\\editorgcbuttoncommands.h",
+            "x:\\unrealengine\\5.4.4-release\\yapdev\\plugins\\editorgcbutton\\source\\editorgcbutton\\public\\editorgcbuttonstyle.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

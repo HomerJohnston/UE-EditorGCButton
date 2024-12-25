@@ -1,0 +1,26 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "x:\\unrealengine\\5.4.4-release\\yapdev\\plugins\\editorgcbutton\\source\\editorgcbutton\\private\\editorgcbuttonstyle.cpp",
+        "ProvidedModule": "",
+        "PCH": "x:\\unrealengine\\5.4.4-release\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "x:\\unrealengine\\5.4.4-release\\yapdev\\plugins\\editorgcbutton\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\editorgcbutton\\definitions.editorgcbutton.h",
+            "x:\\unrealengine\\5.4.4-release\\yapdev\\plugins\\editorgcbutton\\source\\editorgcbutton\\public\\editorgcbuttonstyle.h",
+            "x:\\unrealengine\\5.4.4-release\\yapdev\\plugins\\editorgcbutton\\source\\editorgcbutton\\public\\editorgcbutton.h",
+            "x:\\unrealengine\\5.4.4-release\\engine\\source\\runtime\\slatecore\\public\\styling\\slatestyleregistry.h",
+            "x:\\unrealengine\\5.4.4-release\\engine\\source\\runtime\\engine\\public\\slate\\slategameresources.h",
+            "x:\\unrealengine\\5.4.4-release\\engine\\source\\runtime\\projects\\public\\interfaces\\ipluginmanager.h",
+            "x:\\unrealengine\\5.4.4-release\\engine\\source\\runtime\\projects\\public\\plugindescriptor.h",
+            "x:\\unrealengine\\5.4.4-release\\engine\\source\\runtime\\projects\\public\\custombuildsteps.h",
+            "x:\\unrealengine\\5.4.4-release\\engine\\source\\runtime\\projects\\public\\localizationdescriptor.h",
+            "x:\\unrealengine\\5.4.4-release\\engine\\source\\runtime\\projects\\public\\moduledescriptor.h",
+            "x:\\unrealengine\\5.4.4-release\\engine\\source\\runtime\\projects\\public\\plugindisalloweddescriptor.h",
+            "x:\\unrealengine\\5.4.4-release\\engine\\source\\runtime\\projects\\public\\pluginreferencedescriptor.h",
+            "x:\\unrealengine\\5.4.4-release\\engine\\source\\runtime\\projects\\public\\versescope.h",
+            "x:\\unrealengine\\5.4.4-release\\engine\\source\\runtime\\slatecore\\public\\styling\\slatestylemacros.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

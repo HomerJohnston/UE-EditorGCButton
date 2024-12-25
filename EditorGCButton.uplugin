@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "EditorGCButton",
+	"Description": "",
+	"Category": "Other",
+	"CreatedBy": "Ghost Pepper Games",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "EditorGCButton",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}
