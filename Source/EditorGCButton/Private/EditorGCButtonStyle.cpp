@@ -34,7 +34,6 @@ FName FEditorGCButtonStyle::GetStyleSetName()
 	return StyleSetName;
 }
 
-
 const FVector2D Icon16x16(16.0f, 16.0f);
 const FVector2D Icon20x20(20.0f, 20.0f);
 
@@ -42,8 +41,7 @@ TSharedRef< FSlateStyleSet > FEditorGCButtonStyle::Create()
 {
 	TSharedRef< FSlateStyleSet > Style = MakeShareable(new FSlateStyleSet("EditorGCButtonStyle"));
 	Style->SetContentRoot(IPluginManager::Get().FindPlugin("EditorGCButton")->GetBaseDir() / TEXT("Resources"));
-
-	Style->Set("EditorGCButton.PluginAction", new IMAGE_BRUSH(TEXT("EditorGCButton"), Icon20x20));
+	Style->Set("EditorGCButton.PluginAction", new IMAGE_BRUSH_SVG(TEXT("EditorGCButton"), Icon20x20));
 	return Style;
 }
 
