@@ -55,14 +55,6 @@ void FEditorGCButtonModule::RegisterMenus()
 	FToolMenuOwnerScoped OwnerScoped(this);
 
 	{
-		UToolMenu* Menu = UToolMenus::Get()->ExtendMenu("LevelEditor.MainMenu.Window");
-		{
-			FToolMenuSection& Section = Menu->FindOrAddSection("WindowLayout");
-			Section.AddMenuEntryWithCommandList(FEditorGCButtonCommands::Get().PluginAction, PluginCommands);
-		}
-	}
-
-	{
 		UToolMenu* ToolbarMenu = UToolMenus::Get()->ExtendMenu("LevelEditor.LevelEditorToolBar.PlayToolBar");
 		{
 			FToolMenuSection& Section = ToolbarMenu->FindOrAddSection("PluginTools");
