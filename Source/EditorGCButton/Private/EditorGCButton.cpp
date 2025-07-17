@@ -13,20 +13,25 @@ static const FName EditorGCButtonTabName("EditorGCButton");
 
 void FEditorGCButtonModule::StartupModule()
 {
-	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
-	
+	// Initialize our style
 	FEditorGCButtonStyle::Initialize();
-	FEditorGCButtonStyle::ReloadTextures();
 
+	// Initialize our commands container
 	FEditorGCButtonCommands::Register();
-	
+
+	// Setup our master command-actions list
 	PluginCommands = MakeShareable(new FUICommandList);
 
 	PluginCommands->MapAction(
-		FEditorGCButtonCommands::Get().PluginAction,
+		FEditorGCButtonCommands::Get().CollectGarbageAction,
 		FExecuteAction::CreateRaw(this, &FEditorGCButtonModule::PluginButtonClicked),
 		FCanExecuteAction());
 
+	PluginCommands->MapAction(
+		FEditorGCButtonCommands::Get().ReloadSlateResourcesAction,
+		FExecuteAction::CreateRaw(this, &FEditorGCButtonModule::ReloadSlateResourcesClicked),
+		FCanExecuteAction());
+	
 	UToolMenus::RegisterStartupCallback(FSimpleMulticastDelegate::FDelegate::CreateRaw(this, &FEditorGCButtonModule::RegisterMenus));
 }
 
@@ -49,6 +54,11 @@ void FEditorGCButtonModule::PluginButtonClicked()
 	CollectGarbage(EObjectFlags::RF_NoFlags);
 }
 
+void FEditorGCButtonModule::ReloadSlateResourcesClicked()
+{
+	FSlateApplication::Get().GetRenderer()->ReloadTextureResources();
+}
+
 void FEditorGCButtonModule::RegisterMenus()
 {
 	// Owner will be used for cleanup in call to UToolMenus::UnregisterOwner
@@ -59,8 +69,10 @@ void FEditorGCButtonModule::RegisterMenus()
 		{
 			FToolMenuSection& Section = ToolbarMenu->FindOrAddSection("PluginTools");
 			{
-				FToolMenuEntry& Entry = Section.AddEntry(FToolMenuEntry::InitToolBarButton(FEditorGCButtonCommands::Get().PluginAction));
-				Entry.SetCommandList(PluginCommands);
+				FToolMenuEntry& Entry1 = Section.AddEntry(FToolMenuEntry::InitToolBarButton(FEditorGCButtonCommands::Get().CollectGarbageAction));
+				FToolMenuEntry& Entry2 = Section.AddEntry(FToolMenuEntry::InitToolBarButton(FEditorGCButtonCommands::Get().ReloadSlateResourcesAction));
+				Entry1.SetCommandList(PluginCommands);
+				Entry2.SetCommandList(PluginCommands);
 			}
 		}
 	}

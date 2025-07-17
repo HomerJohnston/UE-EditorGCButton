@@ -16,8 +16,9 @@ public:
 	}
 
 	// TCommands<> interface
-	virtual void RegisterCommands() override;
+	void RegisterCommands() override;
 
 public:
-	TSharedPtr< FUICommandInfo > PluginAction;
+	TSharedPtr< FUICommandInfo > CollectGarbageAction;
+	TSharedPtr< FUICommandInfo > ReloadSlateResourcesAction;
 };

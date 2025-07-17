@@ -18,7 +18,8 @@ public:
 	
 	/** This function will be bound to Command. */
 	void PluginButtonClicked();
-	
+	void ReloadSlateResourcesClicked();
+
 private:
 
 	void RegisterMenus();

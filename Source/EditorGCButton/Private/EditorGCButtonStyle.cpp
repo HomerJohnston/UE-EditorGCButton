@@ -41,16 +41,11 @@ TSharedRef< FSlateStyleSet > FEditorGCButtonStyle::Create()
 {
 	TSharedRef< FSlateStyleSet > Style = MakeShareable(new FSlateStyleSet("EditorGCButtonStyle"));
 	Style->SetContentRoot(IPluginManager::Get().FindPlugin("EditorGCButton")->GetBaseDir() / TEXT("Resources"));
-	Style->Set("EditorGCButton.PluginAction", new IMAGE_BRUSH_SVG(TEXT("EditorGCButton"), Icon20x20));
+	
+	Style->Set("EditorGCButton.CollectGarbageAction", new IMAGE_BRUSH_SVG(TEXT("CollectGarbage"), Icon20x20));
+	Style->Set("EditorGCButton.ReloadSlateResourcesAction", new IMAGE_BRUSH_SVG(TEXT("ReloadSlateResources"), Icon20x20));
+	
 	return Style;
-}
-
-void FEditorGCButtonStyle::ReloadTextures()
-{
-	if (FSlateApplication::IsInitialized())
-	{
-		FSlateApplication::Get().GetRenderer()->ReloadTextureResources();
-	}
 }
 
 const ISlateStyle& FEditorGCButtonStyle::Get()

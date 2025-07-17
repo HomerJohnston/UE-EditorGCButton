@@ -6,7 +6,8 @@
 
 void FEditorGCButtonCommands::RegisterCommands()
 {
-	UI_COMMAND(PluginAction, "EditorGCButton", "Collect garbage", EUserInterfaceActionType::Button, FInputChord());
+	UI_COMMAND(CollectGarbageAction, "EditorGCButton", "Collect garbage", EUserInterfaceActionType::Button, FInputChord());
+	UI_COMMAND(ReloadSlateResourcesAction, "ReloadSlateResources", "Reload Slate Resources", EUserInterfaceActionType::Button, FInputChord());
 }
 
 #undef LOCTEXT_NAMESPACE
